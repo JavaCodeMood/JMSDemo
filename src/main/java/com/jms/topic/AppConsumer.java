@@ -13,7 +13,7 @@ import javax.jms.TextMessage;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 /**
- * 主题模式-消息消费者
+ * 主题模式-消息订阅者
  *
  * @description 
  *

@@ -12,7 +12,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 
 /**
- * 主题模式-消息生产者
+ * 主题模式-消息发布者
  *
  * @description 
  *
