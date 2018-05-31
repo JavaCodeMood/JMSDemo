@@ -1,0 +1,38 @@
+Java消息中间件
+1、JMS相关概念
+提供者：实现JMS规范的消息中间件服务器
+客户端：发送或接收消息的应用程序
+生产者/发布者：创建并发送消息的客户端
+消费者/订阅者：接收并处理消息的客户端
+消息：应用程序之间传递的数据内容
+消息模式：在客户端之间传递消息的方式，JMS中定义了主题模式和队列模式。
+
+2. JMS消息模式——队列模式
+（1）队列模式的客户端包括生产者和消费者
+（2）队列中的消息只能被一个消费者消费
+（3）消费者可以随时消费队列中的消息
+
+3.JMS消息模式——主题模式
+（1）主题模式客户端包括发布者和订阅者
+（2）主题中的消息被所有订阅者消费
+（3）消费者不能消费订阅之前就发送到主题中的消息
+
+4. JMS规范——编码接口说明
+（1）ConnectionFactory：用于创建连接到消息中间件的连接工厂
+（2）Connection：代表了应用程序和消息服务器之间的通信链路
+（3）Destination：指消息发布和接收的地点，包括队列或主题
+（4）Session：表示一个单线程的上下文，用于发送和接收消息
+（5）MessageConsumer：由会话创建，用于接收发送到的目标消息
+（6）MessageProducer：由会话创建，用于发送消息到目标
+（7）Message：是在消费者和生产者之间传送的对象，消息头，一组消息属性，一个消息体。
+
+5. ActiveMQ安装
+（1）在Windows平台上安装ActiveMQ
+下载地址：http://activemq.apache.org/download.html
+下载之后直接启动服务就可以用了。
+（2）在Linux平台安装ActiveMQ
+下载命令：
+wget http://mirrors.cnnic.cn/apache//activemq/5.15.4/apache-activemq-5.15.4-bin.tar.gz
+解压缩：tar –zxvf apache-activemq-5.15.4-bin.tar.gz
+进入bin目录下：./activemq start 启动服务
+浏览器中访问：http://127.0.0.1:8161    登录账号：admin/admin
